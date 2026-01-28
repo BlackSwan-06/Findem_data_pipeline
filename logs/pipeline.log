@@ -1,0 +1,348 @@
+2026-01-27 20:12:03,472 - __main__ - INFO - ================================================================================
+2026-01-27 20:12:03,472 - __main__ - INFO - Starting E-Commerce Data Pipeline
+2026-01-27 20:12:03,472 - __main__ - INFO - ================================================================================
+2026-01-27 20:12:03,472 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-27 20:12:03,473 - __main__ - INFO - Stage 1: File Information
+2026-01-27 20:12:03,473 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-27 20:12:03,478 - src.ingestion.csv_reader - INFO - File info: 78.35 MB, 9 columns
+2026-01-27 20:12:03,478 - __main__ - INFO - Input file: /Users/pkashinath/Documents/GitHub/Findem/data/ecommerce_sales.csv
+2026-01-27 20:12:03,478 - __main__ - INFO - File size: 78.35 MB (0.08 GB)
+2026-01-27 20:12:03,478 - __main__ - INFO - Columns: order_id, product_name, category, quantity, unit_price, discount_percent, region, sale_date, revenue
+2026-01-27 20:12:03,478 - __main__ - INFO - Chunk size: 100,000 rows
+2026-01-27 20:12:03,478 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-27 20:12:03,478 - __main__ - INFO - Stage 2: Processing Data Chunks
+2026-01-27 20:12:03,478 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-27 20:12:03,478 - src.ingestion.csv_reader - INFO - Starting chunked read of /Users/pkashinath/Documents/GitHub/Findem/data/ecommerce_sales.csv
+2026-01-27 20:12:03,478 - src.ingestion.csv_reader - INFO - Chunk size: 100,000 rows
+2026-01-27 20:12:03,586 - src.ingestion.csv_reader - INFO - Processed chunk 1: 100,000 rows (Total: 100,000)
+2026-01-27 20:12:03,915 - __main__ - INFO - Chunk 1: Input=100,000 rows, Cleaned=95,541 rows
+2026-01-27 20:12:04,056 - src.ingestion.csv_reader - INFO - Processed chunk 2: 100,000 rows (Total: 200,000)
+2026-01-27 20:12:04,353 - __main__ - INFO - Chunk 2: Input=100,000 rows, Cleaned=95,484 rows
+2026-01-27 20:12:04,448 - src.ingestion.csv_reader - INFO - Processed chunk 3: 100,000 rows (Total: 300,000)
+2026-01-27 20:12:04,726 - __main__ - INFO - Chunk 3: Input=100,000 rows, Cleaned=95,550 rows
+2026-01-27 20:12:04,818 - src.ingestion.csv_reader - INFO - Processed chunk 4: 100,000 rows (Total: 400,000)
+2026-01-27 20:12:05,099 - __main__ - INFO - Chunk 4: Input=100,000 rows, Cleaned=95,532 rows
+2026-01-27 20:12:05,194 - src.ingestion.csv_reader - INFO - Processed chunk 5: 100,000 rows (Total: 500,000)
+2026-01-27 20:12:05,464 - __main__ - INFO - Chunk 5: Input=100,000 rows, Cleaned=95,529 rows
+2026-01-27 20:12:05,555 - src.ingestion.csv_reader - INFO - Processed chunk 6: 100,000 rows (Total: 600,000)
+2026-01-27 20:12:05,828 - __main__ - INFO - Chunk 6: Input=100,000 rows, Cleaned=95,524 rows
+2026-01-27 20:12:05,923 - src.ingestion.csv_reader - INFO - Processed chunk 7: 100,000 rows (Total: 700,000)
+2026-01-27 20:12:06,196 - __main__ - INFO - Chunk 7: Input=100,000 rows, Cleaned=95,628 rows
+2026-01-27 20:12:06,286 - src.ingestion.csv_reader - INFO - Processed chunk 8: 100,000 rows (Total: 800,000)
+2026-01-27 20:12:06,565 - __main__ - INFO - Chunk 8: Input=100,000 rows, Cleaned=95,635 rows
+2026-01-27 20:12:06,651 - src.ingestion.csv_reader - INFO - Processed chunk 9: 100,000 rows (Total: 900,000)
+2026-01-27 20:12:06,930 - __main__ - INFO - Chunk 9: Input=100,000 rows, Cleaned=95,630 rows
+2026-01-27 20:12:07,020 - src.ingestion.csv_reader - INFO - Processed chunk 10: 100,000 rows (Total: 1,000,000)
+2026-01-27 20:12:07,295 - __main__ - INFO - Chunk 10: Input=100,000 rows, Cleaned=95,680 rows
+2026-01-27 20:12:07,295 - __main__ - INFO - Total chunks processed: 10
+2026-01-27 20:12:07,299 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-27 20:12:07,300 - __main__ - INFO - Stage 3: Generating Analytical Outputs
+2026-01-27 20:12:07,300 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-27 20:12:07,302 - src.transformation.aggregator - INFO - Generated monthly sales summary: 48 months
+2026-01-27 20:12:07,304 - __main__ - INFO - ✓ Monthly sales summary saved: /Users/pkashinath/Documents/GitHub/Findem/data/output/monthly_sales_summary.csv
+2026-01-27 20:12:07,304 - __main__ - INFO -   - 48 months
+2026-01-27 20:12:07,306 - src.transformation.aggregator - INFO - Generated top products: 10 products
+2026-01-27 20:12:07,307 - __main__ - INFO - ✓ Top products saved: /Users/pkashinath/Documents/GitHub/Findem/data/output/top_products.csv
+2026-01-27 20:12:07,307 - __main__ - INFO -   - 10 products
+2026-01-27 20:12:07,309 - src.transformation.aggregator - INFO - Generated anomaly records: 5 records
+2026-01-27 20:12:07,310 - __main__ - INFO - ✓ Anomaly records saved: /Users/pkashinath/Documents/GitHub/Findem/data/output/anomaly_records.csv
+2026-01-27 20:12:07,310 - __main__ - INFO -   - 5 records
+2026-01-27 20:12:07,310 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-27 20:12:07,310 - __main__ - INFO - Stage 4: Data Quality Report
+2026-01-27 20:12:07,310 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-27 20:12:07,310 - __main__ - ERROR - Pipeline failed: Object of type int64 is not JSON serializable
+Traceback (most recent call last):
+  File "/Users/pkashinath/Documents/GitHub/Findem/src/pipeline.py", line 81, in run
+    self._generate_quality_report()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/pkashinath/Documents/GitHub/Findem/src/pipeline.py", line 177, in _generate_quality_report
+    json.dump(quality_report, f, indent=2)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+                 ^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type int64 is not JSON serializable
+2026-01-27 20:27:52,093 - __main__ - INFO - ================================================================================
+2026-01-27 20:27:52,093 - __main__ - INFO - Starting E-Commerce Data Pipeline
+2026-01-27 20:27:52,094 - __main__ - INFO - ================================================================================
+2026-01-27 20:27:52,094 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-27 20:27:52,094 - __main__ - INFO - Stage 1: File Information
+2026-01-27 20:27:52,094 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-27 20:27:52,099 - src.ingestion.csv_reader - INFO - File info: 78.35 MB, 9 columns
+2026-01-27 20:27:52,099 - __main__ - INFO - Input file: /Users/pkashinath/Documents/GitHub/Findem/data/ecommerce_sales.csv
+2026-01-27 20:27:52,099 - __main__ - INFO - File size: 78.35 MB (0.08 GB)
+2026-01-27 20:27:52,099 - __main__ - INFO - Columns: order_id, product_name, category, quantity, unit_price, discount_percent, region, sale_date, revenue
+2026-01-27 20:27:52,099 - __main__ - INFO - Chunk size: 100,000 rows
+2026-01-27 20:27:52,099 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-27 20:27:52,099 - __main__ - INFO - Stage 2: Processing Data Chunks
+2026-01-27 20:27:52,099 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-27 20:27:52,099 - src.ingestion.csv_reader - INFO - Starting chunked read of /Users/pkashinath/Documents/GitHub/Findem/data/ecommerce_sales.csv
+2026-01-27 20:27:52,099 - src.ingestion.csv_reader - INFO - Chunk size: 100,000 rows
+2026-01-27 20:27:52,199 - src.ingestion.csv_reader - INFO - Processed chunk 1: 100,000 rows (Total: 100,000)
+2026-01-27 20:27:52,493 - __main__ - INFO - Chunk 1: Input=100,000 rows, Cleaned=95,541 rows
+2026-01-27 20:27:52,589 - src.ingestion.csv_reader - INFO - Processed chunk 2: 100,000 rows (Total: 200,000)
+2026-01-27 20:27:52,861 - __main__ - INFO - Chunk 2: Input=100,000 rows, Cleaned=95,484 rows
+2026-01-27 20:27:52,951 - src.ingestion.csv_reader - INFO - Processed chunk 3: 100,000 rows (Total: 300,000)
+2026-01-27 20:27:53,225 - __main__ - INFO - Chunk 3: Input=100,000 rows, Cleaned=95,550 rows
+2026-01-27 20:27:53,319 - src.ingestion.csv_reader - INFO - Processed chunk 4: 100,000 rows (Total: 400,000)
+2026-01-27 20:27:53,591 - __main__ - INFO - Chunk 4: Input=100,000 rows, Cleaned=95,532 rows
+2026-01-27 20:27:53,679 - src.ingestion.csv_reader - INFO - Processed chunk 5: 100,000 rows (Total: 500,000)
+2026-01-27 20:27:53,947 - __main__ - INFO - Chunk 5: Input=100,000 rows, Cleaned=95,529 rows
+2026-01-27 20:27:54,036 - src.ingestion.csv_reader - INFO - Processed chunk 6: 100,000 rows (Total: 600,000)
+2026-01-27 20:27:54,308 - __main__ - INFO - Chunk 6: Input=100,000 rows, Cleaned=95,524 rows
+2026-01-27 20:27:54,396 - src.ingestion.csv_reader - INFO - Processed chunk 7: 100,000 rows (Total: 700,000)
+2026-01-27 20:27:54,670 - __main__ - INFO - Chunk 7: Input=100,000 rows, Cleaned=95,628 rows
+2026-01-27 20:27:54,760 - src.ingestion.csv_reader - INFO - Processed chunk 8: 100,000 rows (Total: 800,000)
+2026-01-27 20:27:55,031 - __main__ - INFO - Chunk 8: Input=100,000 rows, Cleaned=95,635 rows
+2026-01-27 20:27:55,117 - src.ingestion.csv_reader - INFO - Processed chunk 9: 100,000 rows (Total: 900,000)
+2026-01-27 20:27:55,393 - __main__ - INFO - Chunk 9: Input=100,000 rows, Cleaned=95,630 rows
+2026-01-27 20:27:55,479 - src.ingestion.csv_reader - INFO - Processed chunk 10: 100,000 rows (Total: 1,000,000)
+2026-01-27 20:27:55,756 - __main__ - INFO - Chunk 10: Input=100,000 rows, Cleaned=95,680 rows
+2026-01-27 20:27:55,756 - __main__ - INFO - Total chunks processed: 10
+2026-01-27 20:27:55,760 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-27 20:27:55,760 - __main__ - INFO - Stage 3: Generating Analytical Outputs
+2026-01-27 20:27:55,760 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-27 20:27:55,762 - src.transformation.aggregator - INFO - Generated monthly sales summary: 48 months
+2026-01-27 20:27:55,764 - __main__ - INFO - ✓ Monthly sales summary saved: /Users/pkashinath/Documents/GitHub/Findem/data/output/monthly_sales_summary.csv
+2026-01-27 20:27:55,764 - __main__ - INFO -   - 48 months
+2026-01-27 20:27:55,766 - src.transformation.aggregator - INFO - Generated top products: 10 products
+2026-01-27 20:27:55,767 - __main__ - INFO - ✓ Top products saved: /Users/pkashinath/Documents/GitHub/Findem/data/output/top_products.csv
+2026-01-27 20:27:55,767 - __main__ - INFO -   - 10 products
+2026-01-27 20:27:55,769 - src.transformation.aggregator - INFO - Generated anomaly records: 5 records
+2026-01-27 20:27:55,770 - __main__ - INFO - ✓ Anomaly records saved: /Users/pkashinath/Documents/GitHub/Findem/data/output/anomaly_records.csv
+2026-01-27 20:27:55,771 - __main__ - INFO -   - 5 records
+2026-01-27 20:27:55,771 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-27 20:27:55,771 - __main__ - INFO - Stage 4: Data Quality Report
+2026-01-27 20:27:55,771 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-27 20:27:55,771 - __main__ - INFO - ✓ Data quality report saved: /Users/pkashinath/Documents/GitHub/Findem/data/output/data_quality_report.json
+2026-01-27 20:27:55,771 - __main__ - INFO -   - Total rows processed: 1,000,000
+2026-01-27 20:27:55,771 - __main__ - INFO -   - Total rows cleaned: 955,733
+2026-01-27 20:27:55,771 - __main__ - INFO -   - Rows removed: 44,267
+2026-01-27 20:27:55,771 - __main__ - INFO -   - Data quality score: 95.57%
+2026-01-27 20:27:55,771 - __main__ - INFO -   Quality Issues Found:
+2026-01-27 20:27:55,771 - __main__ - INFO -     - duplicate_orders: 11,005
+2026-01-27 20:27:55,771 - __main__ - INFO -     - invalid_quantity: 11,074
+2026-01-27 20:27:55,771 - __main__ - INFO -     - invalid_price: 11,189
+2026-01-27 20:27:55,771 - __main__ - INFO -     - invalid_discount: 11,134
+2026-01-27 20:27:55,771 - __main__ - INFO -     - invalid_date: 10,999
+2026-01-27 20:27:55,771 - __main__ - INFO -     - missing_values: 33,262
+2026-01-27 20:27:55,771 - __main__ - INFO -     - normalized_regions: 622,659
+2026-01-27 20:27:55,771 - __main__ - INFO -     - normalized_categories: 6,588
+2026-01-27 20:27:55,771 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-27 20:27:55,771 - __main__ - INFO - Pipeline Summary
+2026-01-27 20:27:55,771 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-27 20:27:55,771 - __main__ - INFO - Execution time: 0m 3s
+2026-01-27 20:27:55,771 - __main__ - INFO - Total rows processed: 1,000,000
+2026-01-27 20:27:55,771 - __main__ - INFO - Chunks processed: 10
+2026-01-27 20:27:55,771 - __main__ - INFO - 
+Output files:
+2026-01-27 20:27:55,771 - __main__ - INFO -   - /Users/pkashinath/Documents/GitHub/Findem/data/output/monthly_sales_summary.csv
+2026-01-27 20:27:55,771 - __main__ - INFO -   - /Users/pkashinath/Documents/GitHub/Findem/data/output/top_products.csv
+2026-01-27 20:27:55,771 - __main__ - INFO -   - /Users/pkashinath/Documents/GitHub/Findem/data/output/anomaly_records.csv
+2026-01-27 20:27:55,771 - __main__ - INFO -   - /Users/pkashinath/Documents/GitHub/Findem/data/output/data_quality_report.json
+2026-01-27 20:27:55,771 - __main__ - INFO - ================================================================================
+2026-01-27 20:27:55,771 - __main__ - INFO - Pipeline completed successfully!
+2026-01-27 20:27:55,771 - __main__ - INFO - ================================================================================
+2026-01-27 21:22:01,815 - __main__ - INFO - ================================================================================
+2026-01-27 21:22:01,815 - __main__ - INFO - Starting Data Pipeline
+2026-01-27 21:22:01,815 - __main__ - INFO - ================================================================================
+2026-01-27 21:22:01,815 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-27 21:22:01,815 - __main__ - INFO - Stage 1: File Information
+2026-01-27 21:22:01,815 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-27 21:22:01,816 - __main__ - ERROR - Pipeline failed: No columns to parse from file
+Traceback (most recent call last):
+  File "/Users/pkashinath/Documents/GitHub/Findem/src/pipeline.py", line 68, in run
+    self._log_file_info()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/pkashinath/Documents/GitHub/Findem/src/pipeline.py", line 95, in _log_file_info
+    file_info = self.reader.get_file_info()
+  File "/Users/pkashinath/Documents/GitHub/Findem/src/ingestion/csv_reader.py", line 124, in get_file_info
+    first_chunk = pd.read_csv(self.file_path, nrows=1)
+  File "/Users/pkashinath/Documents/GitHub/Findem/.venv/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 873, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/pkashinath/Documents/GitHub/Findem/.venv/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 300, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/pkashinath/Documents/GitHub/Findem/.venv/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1645, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/pkashinath/Documents/GitHub/Findem/.venv/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1922, in _make_engine
+    return mapping[engine](f, **self.options)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/pkashinath/Documents/GitHub/Findem/.venv/lib/python3.13/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 95, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "pandas/_libs/parsers.pyx", line 575, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file
+2026-01-28 10:24:11,808 - src.ingestion.csv_reader - INFO - File validation passed: /Users/pkashinath/Documents/GitHub/findem_data_pipeline_assignmenet/data/ecommerce_sales.csv (82,153,182 bytes)
+2026-01-28 10:24:11,808 - __main__ - INFO - ================================================================================
+2026-01-28 10:24:11,808 - __main__ - INFO - Starting Data Pipeline
+2026-01-28 10:24:11,808 - __main__ - INFO - ================================================================================
+2026-01-28 10:24:11,808 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 10:24:11,808 - __main__ - INFO - Stage 1: File Information
+2026-01-28 10:24:11,808 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 10:24:11,810 - src.ingestion.csv_reader - INFO - File info: 78.35 MB, 9 columns
+2026-01-28 10:24:11,810 - __main__ - INFO - Input file: /Users/pkashinath/Documents/GitHub/findem_data_pipeline_assignmenet/data/ecommerce_sales.csv
+2026-01-28 10:24:11,810 - __main__ - INFO - File size: 78.35 MB (0.08 GB)
+2026-01-28 10:24:11,810 - __main__ - INFO - Columns: order_id, product_name, category, quantity, unit_price, discount_percent, region, sale_date, revenue
+2026-01-28 10:24:11,810 - __main__ - INFO - Chunk size: 100,000 rows
+2026-01-28 10:24:11,810 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 10:24:11,810 - __main__ - INFO - Stage 2: Processing Data Chunks
+2026-01-28 10:24:11,810 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 10:24:11,810 - src.ingestion.csv_reader - INFO - Starting chunked read of /Users/pkashinath/Documents/GitHub/findem_data_pipeline_assignmenet/data/ecommerce_sales.csv
+2026-01-28 10:24:11,810 - src.ingestion.csv_reader - INFO - Chunk size: 100,000 rows
+2026-01-28 10:24:11,909 - src.ingestion.csv_reader - INFO - Processed chunk 1: 100,000 rows (Total: 100,000)
+2026-01-28 10:24:12,190 - __main__ - INFO - Chunk 1: Input=100,000 rows, Cleaned=95,562 rows
+2026-01-28 10:24:12,280 - src.ingestion.csv_reader - INFO - Processed chunk 2: 100,000 rows (Total: 200,000)
+2026-01-28 10:24:12,558 - __main__ - INFO - Chunk 2: Input=100,000 rows, Cleaned=95,529 rows
+2026-01-28 10:24:12,646 - src.ingestion.csv_reader - INFO - Processed chunk 3: 100,000 rows (Total: 300,000)
+2026-01-28 10:24:12,927 - __main__ - INFO - Chunk 3: Input=100,000 rows, Cleaned=95,540 rows
+2026-01-28 10:24:13,015 - src.ingestion.csv_reader - INFO - Processed chunk 4: 100,000 rows (Total: 400,000)
+2026-01-28 10:24:13,292 - __main__ - INFO - Chunk 4: Input=100,000 rows, Cleaned=95,545 rows
+2026-01-28 10:24:13,381 - src.ingestion.csv_reader - INFO - Processed chunk 5: 100,000 rows (Total: 500,000)
+2026-01-28 10:24:13,658 - __main__ - INFO - Chunk 5: Input=100,000 rows, Cleaned=95,628 rows
+2026-01-28 10:24:13,746 - src.ingestion.csv_reader - INFO - Processed chunk 6: 100,000 rows (Total: 600,000)
+2026-01-28 10:24:14,029 - __main__ - INFO - Chunk 6: Input=100,000 rows, Cleaned=95,594 rows
+2026-01-28 10:24:14,118 - src.ingestion.csv_reader - INFO - Processed chunk 7: 100,000 rows (Total: 700,000)
+2026-01-28 10:24:14,397 - __main__ - INFO - Chunk 7: Input=100,000 rows, Cleaned=95,566 rows
+2026-01-28 10:24:14,485 - src.ingestion.csv_reader - INFO - Processed chunk 8: 100,000 rows (Total: 800,000)
+2026-01-28 10:24:14,763 - __main__ - INFO - Chunk 8: Input=100,000 rows, Cleaned=95,537 rows
+2026-01-28 10:24:14,851 - src.ingestion.csv_reader - INFO - Processed chunk 9: 100,000 rows (Total: 900,000)
+2026-01-28 10:24:15,133 - __main__ - INFO - Chunk 9: Input=100,000 rows, Cleaned=95,575 rows
+2026-01-28 10:24:15,226 - src.ingestion.csv_reader - INFO - Processed chunk 10: 100,000 rows (Total: 1,000,000)
+2026-01-28 10:24:15,506 - __main__ - INFO - Chunk 10: Input=100,000 rows, Cleaned=95,575 rows
+2026-01-28 10:24:15,506 - __main__ - INFO - Total chunks processed: 10
+2026-01-28 10:24:15,510 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 10:24:15,510 - __main__ - INFO - Stage 3: Generating Analytical Outputs
+2026-01-28 10:24:15,510 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 10:24:15,512 - src.transformation.aggregator - INFO - Generated monthly sales summary: 48 months
+2026-01-28 10:24:15,514 - __main__ - INFO - ✓ Monthly sales summary saved: /Users/pkashinath/Documents/GitHub/findem_data_pipeline_assignmenet/data/output/monthly_sales_summary.csv
+2026-01-28 10:24:15,514 - __main__ - INFO -   - 48 months
+2026-01-28 10:24:15,516 - src.transformation.aggregator - INFO - Generated top products: 11 products
+2026-01-28 10:24:15,517 - __main__ - INFO - ✓ Top products saved: /Users/pkashinath/Documents/GitHub/findem_data_pipeline_assignmenet/data/output/top_products.csv
+2026-01-28 10:24:15,517 - __main__ - INFO -   - 11 products
+2026-01-28 10:24:15,519 - src.transformation.aggregator - INFO - Generated anomaly records: 5 records
+2026-01-28 10:24:15,519 - __main__ - INFO - ✓ Anomaly records saved: /Users/pkashinath/Documents/GitHub/findem_data_pipeline_assignmenet/data/output/anomaly_records.csv
+2026-01-28 10:24:15,519 - __main__ - INFO -   - 5 records
+2026-01-28 10:24:15,519 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 10:24:15,519 - __main__ - INFO - Stage 4: Data Quality Report
+2026-01-28 10:24:15,519 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 10:24:15,520 - __main__ - INFO - ✓ Data quality report saved: /Users/pkashinath/Documents/GitHub/findem_data_pipeline_assignmenet/data/output/data_quality_report.json
+2026-01-28 10:24:15,520 - __main__ - INFO -   - Total rows processed: 1,000,000
+2026-01-28 10:24:15,520 - __main__ - INFO -   - Total rows cleaned: 955,651
+2026-01-28 10:24:15,520 - __main__ - INFO -   - Rows removed: 44,349
+2026-01-28 10:24:15,520 - __main__ - INFO -   - Data quality score: 95.57%
+2026-01-28 10:24:15,520 - __main__ - INFO -   Quality Issues Found:
+2026-01-28 10:24:15,520 - __main__ - INFO -     - duplicate_orders: 10,998
+2026-01-28 10:24:15,520 - __main__ - INFO -     - invalid_quantity: 10,971
+2026-01-28 10:24:15,520 - __main__ - INFO -     - invalid_price: 11,155
+2026-01-28 10:24:15,520 - __main__ - INFO -     - invalid_discount: 11,081
+2026-01-28 10:24:15,520 - __main__ - INFO -     - invalid_date: 11,225
+2026-01-28 10:24:15,520 - __main__ - INFO -     - missing_values: 33,351
+2026-01-28 10:24:15,520 - __main__ - INFO -     - normalized_regions: 621,699
+2026-01-28 10:24:15,520 - __main__ - INFO -     - normalized_categories: 6,544
+2026-01-28 10:24:15,520 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 10:24:15,520 - __main__ - INFO - Pipeline Summary
+2026-01-28 10:24:15,520 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 10:24:15,520 - __main__ - INFO - Execution time: 0m 3s
+2026-01-28 10:24:15,520 - __main__ - INFO - Total rows processed: 1,000,000
+2026-01-28 10:24:15,520 - __main__ - INFO - Chunks processed: 10
+2026-01-28 10:24:15,520 - __main__ - INFO - 
+Output files:
+2026-01-28 10:24:15,520 - __main__ - INFO -   - /Users/pkashinath/Documents/GitHub/findem_data_pipeline_assignmenet/data/output/monthly_sales_summary.csv
+2026-01-28 10:24:15,520 - __main__ - INFO -   - /Users/pkashinath/Documents/GitHub/findem_data_pipeline_assignmenet/data/output/top_products.csv
+2026-01-28 10:24:15,520 - __main__ - INFO -   - /Users/pkashinath/Documents/GitHub/findem_data_pipeline_assignmenet/data/output/anomaly_records.csv
+2026-01-28 10:24:15,520 - __main__ - INFO -   - /Users/pkashinath/Documents/GitHub/findem_data_pipeline_assignmenet/data/output/data_quality_report.json
+2026-01-28 10:24:15,520 - __main__ - INFO - ================================================================================
+2026-01-28 10:24:15,520 - __main__ - INFO - Pipeline completed successfully!
+2026-01-28 10:24:15,520 - __main__ - INFO - ================================================================================
+2026-01-28 10:25:44,779 - src.ingestion.csv_reader - INFO - File validation passed: /Users/pkashinath/Documents/GitHub/findem_data_pipeline_assignmenet/data/ecommerce_sales.csv (82,153,182 bytes)
+2026-01-28 10:25:44,779 - __main__ - INFO - ================================================================================
+2026-01-28 10:25:44,779 - __main__ - INFO - Starting Data Pipeline
+2026-01-28 10:25:44,779 - __main__ - INFO - ================================================================================
+2026-01-28 10:25:44,779 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 10:25:44,779 - __main__ - INFO - Stage 1: File Information
+2026-01-28 10:25:44,779 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 10:25:44,787 - src.ingestion.csv_reader - INFO - File info: 78.35 MB, 9 columns
+2026-01-28 10:25:44,787 - __main__ - INFO - Input file: /Users/pkashinath/Documents/GitHub/findem_data_pipeline_assignmenet/data/ecommerce_sales.csv
+2026-01-28 10:25:44,788 - __main__ - INFO - File size: 78.35 MB (0.08 GB)
+2026-01-28 10:25:44,788 - __main__ - INFO - Columns: order_id, product_name, category, quantity, unit_price, discount_percent, region, sale_date, revenue
+2026-01-28 10:25:44,788 - __main__ - INFO - Chunk size: 100,000 rows
+2026-01-28 10:25:44,788 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 10:25:44,788 - __main__ - INFO - Stage 2: Processing Data Chunks
+2026-01-28 10:25:44,788 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 10:25:44,788 - src.ingestion.csv_reader - INFO - Starting chunked read of /Users/pkashinath/Documents/GitHub/findem_data_pipeline_assignmenet/data/ecommerce_sales.csv
+2026-01-28 10:25:44,788 - src.ingestion.csv_reader - INFO - Chunk size: 100,000 rows
+2026-01-28 10:25:44,884 - src.ingestion.csv_reader - INFO - Processed chunk 1: 100,000 rows (Total: 100,000)
+2026-01-28 10:25:45,173 - __main__ - INFO - Chunk 1: Input=100,000 rows, Cleaned=95,562 rows
+2026-01-28 10:25:45,268 - src.ingestion.csv_reader - INFO - Processed chunk 2: 100,000 rows (Total: 200,000)
+2026-01-28 10:25:45,542 - __main__ - INFO - Chunk 2: Input=100,000 rows, Cleaned=95,529 rows
+2026-01-28 10:25:45,631 - src.ingestion.csv_reader - INFO - Processed chunk 3: 100,000 rows (Total: 300,000)
+2026-01-28 10:25:45,913 - __main__ - INFO - Chunk 3: Input=100,000 rows, Cleaned=95,540 rows
+2026-01-28 10:25:46,002 - src.ingestion.csv_reader - INFO - Processed chunk 4: 100,000 rows (Total: 400,000)
+2026-01-28 10:25:46,281 - __main__ - INFO - Chunk 4: Input=100,000 rows, Cleaned=95,545 rows
+2026-01-28 10:25:46,371 - src.ingestion.csv_reader - INFO - Processed chunk 5: 100,000 rows (Total: 500,000)
+2026-01-28 10:25:46,649 - __main__ - INFO - Chunk 5: Input=100,000 rows, Cleaned=95,628 rows
+2026-01-28 10:25:46,738 - src.ingestion.csv_reader - INFO - Processed chunk 6: 100,000 rows (Total: 600,000)
+2026-01-28 10:25:47,019 - __main__ - INFO - Chunk 6: Input=100,000 rows, Cleaned=95,594 rows
+2026-01-28 10:25:47,106 - src.ingestion.csv_reader - INFO - Processed chunk 7: 100,000 rows (Total: 700,000)
+2026-01-28 10:25:47,383 - __main__ - INFO - Chunk 7: Input=100,000 rows, Cleaned=95,566 rows
+2026-01-28 10:25:47,474 - src.ingestion.csv_reader - INFO - Processed chunk 8: 100,000 rows (Total: 800,000)
+2026-01-28 10:25:47,754 - __main__ - INFO - Chunk 8: Input=100,000 rows, Cleaned=95,537 rows
+2026-01-28 10:25:47,843 - src.ingestion.csv_reader - INFO - Processed chunk 9: 100,000 rows (Total: 900,000)
+2026-01-28 10:25:48,121 - __main__ - INFO - Chunk 9: Input=100,000 rows, Cleaned=95,575 rows
+2026-01-28 10:25:48,214 - src.ingestion.csv_reader - INFO - Processed chunk 10: 100,000 rows (Total: 1,000,000)
+2026-01-28 10:25:48,494 - __main__ - INFO - Chunk 10: Input=100,000 rows, Cleaned=95,575 rows
+2026-01-28 10:25:48,494 - __main__ - INFO - Total chunks processed: 10
+2026-01-28 10:25:48,499 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 10:25:48,499 - __main__ - INFO - Stage 3: Generating Analytical Outputs
+2026-01-28 10:25:48,499 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 10:25:48,502 - src.transformation.aggregator - INFO - Generated monthly sales summary: 48 months
+2026-01-28 10:25:48,504 - __main__ - INFO - ✓ Monthly sales summary saved: /Users/pkashinath/Documents/GitHub/findem_data_pipeline_assignmenet/data/output/monthly_sales_summary.csv
+2026-01-28 10:25:48,504 - __main__ - INFO -   - 48 months
+2026-01-28 10:25:48,506 - src.transformation.aggregator - INFO - Generated top products: 11 products
+2026-01-28 10:25:48,507 - __main__ - INFO - ✓ Top products saved: /Users/pkashinath/Documents/GitHub/findem_data_pipeline_assignmenet/data/output/top_products.csv
+2026-01-28 10:25:48,507 - __main__ - INFO -   - 11 products
+2026-01-28 10:25:48,508 - src.transformation.aggregator - INFO - Generated anomaly records: 5 records
+2026-01-28 10:25:48,510 - __main__ - INFO - ✓ Anomaly records saved: /Users/pkashinath/Documents/GitHub/findem_data_pipeline_assignmenet/data/output/anomaly_records.csv
+2026-01-28 10:25:48,510 - __main__ - INFO -   - 5 records
+2026-01-28 10:25:48,510 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 10:25:48,510 - __main__ - INFO - Stage 4: Data Quality Report
+2026-01-28 10:25:48,510 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 10:25:48,510 - __main__ - INFO - ✓ Data quality report saved: /Users/pkashinath/Documents/GitHub/findem_data_pipeline_assignmenet/data/output/data_quality_report.json
+2026-01-28 10:25:48,510 - __main__ - INFO -   - Total rows processed: 1,000,000
+2026-01-28 10:25:48,510 - __main__ - INFO -   - Total rows cleaned: 955,651
+2026-01-28 10:25:48,510 - __main__ - INFO -   - Rows removed: 44,349
+2026-01-28 10:25:48,510 - __main__ - INFO -   - Data quality score: 95.57%
+2026-01-28 10:25:48,510 - __main__ - INFO -   Quality Issues Found:
+2026-01-28 10:25:48,510 - __main__ - INFO -     - duplicate_orders: 10,998
+2026-01-28 10:25:48,510 - __main__ - INFO -     - invalid_quantity: 10,971
+2026-01-28 10:25:48,510 - __main__ - INFO -     - invalid_price: 11,155
+2026-01-28 10:25:48,510 - __main__ - INFO -     - invalid_discount: 11,081
+2026-01-28 10:25:48,510 - __main__ - INFO -     - invalid_date: 11,225
+2026-01-28 10:25:48,510 - __main__ - INFO -     - missing_values: 33,351
+2026-01-28 10:25:48,510 - __main__ - INFO -     - normalized_regions: 621,699
+2026-01-28 10:25:48,510 - __main__ - INFO -     - normalized_categories: 6,544
+2026-01-28 10:25:48,510 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 10:25:48,510 - __main__ - INFO - Pipeline Summary
+2026-01-28 10:25:48,510 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 10:25:48,510 - __main__ - INFO - Execution time: 0m 3s
+2026-01-28 10:25:48,510 - __main__ - INFO - Total rows processed: 1,000,000
+2026-01-28 10:25:48,510 - __main__ - INFO - Chunks processed: 10
+2026-01-28 10:25:48,510 - __main__ - INFO - 
+Output files:
+2026-01-28 10:25:48,511 - __main__ - INFO -   - /Users/pkashinath/Documents/GitHub/findem_data_pipeline_assignmenet/data/output/monthly_sales_summary.csv
+2026-01-28 10:25:48,511 - __main__ - INFO -   - /Users/pkashinath/Documents/GitHub/findem_data_pipeline_assignmenet/data/output/top_products.csv
+2026-01-28 10:25:48,511 - __main__ - INFO -   - /Users/pkashinath/Documents/GitHub/findem_data_pipeline_assignmenet/data/output/anomaly_records.csv
+2026-01-28 10:25:48,511 - __main__ - INFO -   - /Users/pkashinath/Documents/GitHub/findem_data_pipeline_assignmenet/data/output/data_quality_report.json
+2026-01-28 10:25:48,511 - __main__ - INFO - ================================================================================
+2026-01-28 10:25:48,511 - __main__ - INFO - Pipeline completed successfully!
+2026-01-28 10:25:48,511 - __main__ - INFO - ================================================================================

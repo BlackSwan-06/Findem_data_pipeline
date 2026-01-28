@@ -1,0 +1,14 @@
+{
+  "duplicate_orders": 10998,
+  "invalid_quantity": 10971,
+  "invalid_price": 11155,
+  "invalid_discount": 11081,
+  "invalid_date": 11225,
+  "missing_values": 33351,
+  "normalized_regions": 621699,
+  "normalized_categories": 6544,
+  "total_rows_processed": 1000000,
+  "total_rows_cleaned": 955651,
+  "rows_removed": 44349,
+  "data_quality_score": 95.57
+}
